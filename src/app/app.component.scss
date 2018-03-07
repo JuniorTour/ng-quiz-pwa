@@ -1,0 +1,34 @@
+$forgive: #35e402;
+
+.top-header-toolbar {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.sidenav-container {
+  margin-top: 64px;
+  height: 100vh;
+  .sidenav {
+    background-color: #3B1860;
+  }
+  .main-content {
+    width: 100%;
+    background-color: #fafafa;
+  }
+}
+
+.question-card {
+  .question-card-header-img {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+  //.question-card-img {
+  //}
+  .question-card-actions {
+    text-align: center;
+    button {
+      width:80%;
+    }
+  }
+}
