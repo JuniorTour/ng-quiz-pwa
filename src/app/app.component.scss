@@ -1,24 +1,63 @@
-$forgive: #35e402;
+//$forgive: #35e402;
+$main-color: #AA96DA;
+$sub-color: #FCBAD3;
 
 .top-header-toolbar {
+  height: 56px;
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 1;
+  justify-content: space-between;
+  background-color: #F2BBBB;
+  .menu-toggle {
+    //align-self: flex-end;
+    //float: right;
+    //position: absolute;
+    //right: 0;
+  }
 }
 
 .sidenav-container {
-  margin-top: 64px;
-  height: 100vh;
-  .sidenav {
-    background-color: #3B1860;
-  }
+  margin-top: 56px;
+  z-index: 1;
+
   .main-content {
     width: 100%;
     background-color: #fafafa;
+    z-index: 1;
+  }
+}
+
+.sidenav {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  //box-shadow: 3px 0 8px #ddd;
+  background-color: #FFC7C7;
+
+  mat-list-item {
+    cursor: pointer;
+    background-color: #FFE2E2;
+    border-bottom: 1px solid #ddd;
+    &:hover {
+      background-color: #eee;
+    }
+
+    .material-icons {
+      margin-right: 16px;
+    }
   }
 }
 
 .question-card {
+  width: 80%;
+  border-radius: 5px;
+  margin: 12px auto;
+  //.question-card-header {
+  //
+  //}
   .question-card-header-img {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
@@ -28,7 +67,22 @@ $forgive: #35e402;
   .question-card-actions {
     text-align: center;
     button {
-      width:80%;
+      width:60%;
+      margin: 12px 0;
     }
   }
+}
+
+
+.main-content-obfuscator {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(99,99,99,.5);
+  z-index: 2;
+  //transition-property: opacity;
+  //transition-duration: .2s;
+  //transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
