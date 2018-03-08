@@ -1,0 +1,80 @@
+$border-color: #ddd;
+
+.container {
+  width: 80%;
+  margin: 24px auto;
+}
+
+
+.detail-card-header {
+  flex-direction: column;
+  align-items: center;
+  & > * {
+    margin-bottom: 8px;
+  }
+  mat-card-title {
+    font-weight:bold;
+  }
+}
+
+.detail-card-header-img {
+  float: left;
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.detail-card-content {
+  border-top: 1px solid $border-color;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 12px;
+  .detail-item-box {
+    width: 50%;
+    text-align: center;
+    padding: 12px;
+    &:first-of-type {
+      border-right: 1px solid $border-color;
+    }
+
+    .items-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      .detail-item {
+        flex: 0 0 15px;
+        background-color: #A8D8EA;
+        font-size: 12px;
+        line-height:12px;
+        text-align: center;
+        padding: 4px;
+        margin: 2px;
+      }
+    }
+  }
+}
+
+.sub-detail-row {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  mat-card {
+    cursor: pointer;
+    flex: 1;
+    height: 36px;
+    text-align: center;
+    line-height: 36px;
+    .material-icons {
+      vertical-align: middle;
+    }
+    &:first-of-type {
+      margin-right: 12px;
+    }
+    &:hover {
+      background-color: #ddd;
+    }
+  }
+  .invite-card {
+    flex: 2;
+  }
+}

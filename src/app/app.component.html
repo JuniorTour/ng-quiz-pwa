@@ -1,18 +1,19 @@
 <mat-toolbar class="top-header-toolbar">
   Ng-Quiz-PWA
-  <button mat-icon-button (click)="sidenav.toggle()" class="menu-toggle">
+  <button mat-icon-button (click)="sidenav.open()">
     <i class="material-icons">menu</i>
   </button>
 </mat-toolbar>
 
 <mat-sidenav #sidenav
              class="sidenav"
-             mode="side">
+             mode="push">
+  <div class="sidenav-logo">LOGO</div>
   <mat-list>
-    <mat-list-item>
+    <mat-list-item routerLink="/home" (click)="sidenav.close()">
       <i class="material-icons">home</i> Home
     </mat-list-item>
-    <mat-list-item>
+    <mat-list-item routerLink="/battle" (click)="sidenav.close()">
       <i class="material-icons">home</i> Battle
     </mat-list-item>
   </mat-list>
@@ -22,35 +23,16 @@
 
   <mat-sidenav-content class="main-content">
 
-    <div (click)="sidenav.toggle()"
+    <div (click)="sidenav.close()"
          *ngIf="sidenav.opened"
          class="main-content-obfuscator"></div>
 
-    <!--<div class="ngb-sidenav-content">-->
-      <!--<router-outlet></router-outlet>-->
-    <!--</div>-->
+    <div class="ngb-sidenav-content">
+      <router-outlet></router-outlet>
+    </div>
 
-    <mat-card class="question-card">
-      <mat-card-header class="question-card-header">
-        <div mat-card-avatar class="question-card-header-img"></div>
-        <mat-card-title>Question No.1</mat-card-title>
-        <mat-card-subtitle>Sub Title</mat-card-subtitle>
-      </mat-card-header>
-      <!--<img class="question-card-img" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
-      <mat-card-content class="question-card-content">
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content>
-      <mat-card-actions class="question-card-actions">
-        <button mat-button>A</button>
-        <button mat-button>B</button>
-        <button mat-button>C</button>
-      </mat-card-actions>
-    </mat-card>
   </mat-sidenav-content>
 
 </mat-sidenav-container>
+
 

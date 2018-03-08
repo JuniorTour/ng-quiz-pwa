@@ -1,0 +1,43 @@
+
+<div class="container">
+  <mat-card class="detail-card">
+    <mat-card-header class="detail-card-header">
+      <img mat-card-avatar class="detail-card-header-img" src="{{userInfo?.avatarLink}}" alt="{{userInfo?.name}}">
+      <mat-card-title>{{userInfo?.name}}</mat-card-title>
+      <mat-card-subtitle>{{userInfo?.desc}}</mat-card-subtitle>
+    </mat-card-header>
+    <!--<img class="detail-card-img" mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+    <mat-card-content class="detail-card-content">
+      <div class="detail-item-box">
+        <h4>Points:</h4>
+        <p>66666</p>
+      </div>
+      <div class="detail-item-box">
+        <h4>Items:</h4>
+        <div class="items-row">
+          <div class="detail-item" *ngFor="let item of userInfo?.items">
+            {{item}}
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+    <!--<mat-card-actions class="detail-card-actions">-->
+    <!--<button mat-button>A</button>-->
+    <!--<button mat-button>B</button>-->
+    <!--<button mat-button>C</button>-->
+    <!--</mat-card-actions>-->
+  </mat-card>
+
+  <div class="sub-detail-row">
+    <mat-card class="invite-card txt-cut">
+      <i class="material-icons">favorite</i>
+      Invite Friends~
+    </mat-card>
+
+    <mat-card class="txt-cut">
+      <i class="material-icons">build</i>
+      Config
+    </mat-card>
+
+  </div>
+</div>

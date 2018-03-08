@@ -1,22 +1,31 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {AppRoutingModule} from './app-routing.module';
 
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {CustMatModule} from './custom-material/cust-mat-module';
+import {CustMatModule} from './custom-material-module/cust-mat-module';
 
 
 import { AppComponent } from './app.component';
+import { BattleComponent } from './pages/battle/battle.component';
+import { HomeComponent } from './pages/home/home.component';
+import { DetailCardComponent } from './components/detail-card/detail-card.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BattleComponent,
+    HomeComponent,
+    DetailCardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    CustMatModule
+    CustMatModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
