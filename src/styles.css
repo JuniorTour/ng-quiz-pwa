@@ -10,3 +10,8 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+/*TODO:BUG material-icons doesn't have default width?*/
+.material-icons {
+  width: 24px;
+}

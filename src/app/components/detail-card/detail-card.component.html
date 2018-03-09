@@ -15,7 +15,9 @@
       <div class="detail-item-box">
         <h4>Items:</h4>
         <div class="items-row">
-          <div class="detail-item" *ngFor="let item of userInfo?.items">
+          <div class="detail-item"
+               *ngFor="let item of userInfo?.items"
+               [title]="item">
             {{item}}
           </div>
         </div>
@@ -28,10 +30,10 @@
     <!--</mat-card-actions>-->
   </mat-card>
 
-  <div class="sub-detail-row">
+  <div class="sub-detail-row non-equal-row">
     <mat-card class="invite-card txt-cut">
       <i class="material-icons">favorite</i>
-      Invite Friends~
+      Invite
     </mat-card>
 
     <mat-card class="txt-cut">
@@ -39,5 +41,13 @@
       Config
     </mat-card>
 
+  </div>
+
+
+  <div class="sub-detail-row">
+    <mat-card class="notify-btn txt-cut">
+      <i class="material-icons">notifications active</i>
+      Notify
+    </mat-card>
   </div>
 </div>

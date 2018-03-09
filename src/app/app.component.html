@@ -1,31 +1,37 @@
 <mat-toolbar class="top-header-toolbar">
   Ng-Quiz-PWA
-  <button mat-icon-button (click)="sidenav.open()">
+  <!-- TODO:BUG (mouseup)="sidenav.toggle()" and (click) will be triggered the cdk-focus class wrongly?-->
+  <!--https://material.angular.io/components/sidenav/examples , may have something to do with the sidenav component.-->
+  <!--https://stackblitz.com/angular/oexxklqrrdd?file=app%2Fsidenav-disable-close-example.html-->
+  <!--<button mat-icon-button (mouseup)="sidenav.toggle()">-->
+  <button mat-icon-button (click)="sidenav.toggle()">
     <i class="material-icons">menu</i>
   </button>
 </mat-toolbar>
 
-<mat-sidenav #sidenav
-             class="sidenav"
-             mode="push">
-  <div class="sidenav-logo">LOGO</div>
-  <mat-list>
-    <mat-list-item routerLink="/home" (click)="sidenav.close()">
-      <i class="material-icons">home</i> Home
-    </mat-list-item>
-    <mat-list-item routerLink="/battle" (click)="sidenav.close()">
-      <i class="material-icons">home</i> Battle
-    </mat-list-item>
-  </mat-list>
-</mat-sidenav>
-
 <mat-sidenav-container class="sidenav-container">
 
-  <mat-sidenav-content class="main-content">
+  <mat-sidenav #sidenav
+               opened="false"
+               class="sidenav"
+               fixedInViewport="true"
+               mode="push">
 
-    <div (click)="sidenav.close()"
-         *ngIf="sidenav.opened"
-         class="main-content-obfuscator"></div>
+    <div class="sidenav-logo">LOGO</div>
+
+    <mat-list>
+      <mat-list-item routerLink="/home">
+        <i class="material-icons">home</i>
+        Home
+      </mat-list-item>
+      <mat-list-item routerLink="/battle">
+        <i class="material-icons">games</i>
+        Battle
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="main-content">
 
     <div class="ngb-sidenav-content">
       <router-outlet></router-outlet>

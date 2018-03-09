@@ -9,6 +9,7 @@ $border-color: #ddd;
 .detail-card-header {
   flex-direction: column;
   align-items: center;
+  text-align: center;
   & > * {
     margin-bottom: 8px;
   }
@@ -42,13 +43,14 @@ $border-color: #ddd;
       flex-wrap: wrap;
       justify-content: flex-start;
       .detail-item {
-        flex: 0 0 15px;
+        box-sizing: border-box;
+        flex: 0 0 12.5%;
         background-color: #A8D8EA;
         font-size: 12px;
         line-height:12px;
         text-align: center;
         padding: 4px;
-        margin: 2px;
+        border: 2px solid #fff;
       }
     }
   }
@@ -67,14 +69,15 @@ $border-color: #ddd;
     .material-icons {
       vertical-align: middle;
     }
-    &:first-of-type {
-      margin-right: 12px;
-    }
     &:hover {
       background-color: #ddd;
     }
   }
-  .invite-card {
-    flex: 2;
+}
+
+.non-equal-row {
+  mat-card:first-of-type {
+    margin-right: 12px;
+    flex-grow: 2;
   }
 }

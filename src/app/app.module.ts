@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {AppRoutingModule} from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CustMatModule} from './custom-material-module/cust-mat-module';
+import {AppRoutingModule} from './app-routing.module';
 
 
 import { AppComponent } from './app.component';
@@ -12,7 +14,9 @@ import { BattleComponent } from './pages/battle/battle.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailCardComponent } from './components/detail-card/detail-card.component';
 
-
+import {UserInfoService} from './services/user-info.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -25,9 +29,19 @@ import { DetailCardComponent } from './components/detail-card/detail-card.compon
     BrowserModule,
     BrowserAnimationsModule,
     CustMatModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+
+    // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
+    // and returns simulated server responses.
+    // Remove it when a real server is ready to receive requests.
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
+  providers: [
+    UserInfoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

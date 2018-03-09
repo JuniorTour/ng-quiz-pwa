@@ -7,13 +7,13 @@ $mid-color: #fff;
   height: 56px;
   position: fixed;
   top: 0;
-  z-index: 1;
   color: #fff;
   background-color: $main-color;
   justify-content: space-between;
 }
 
 .sidenav-container {
+  height: 100vh;
   margin-top: 56px;
   z-index: 1;
 
@@ -25,12 +25,8 @@ $mid-color: #fff;
 }
 
 .sidenav {
-  width: 50%;
+  width: 280px;
   height: 100vh;
-  position: fixed;
-  top: 0;
-  z-index: 3;
-  //box-shadow: 3px 0 8px #ddd;
   background-color: $mid-color;
 
   .sidenav-logo {
@@ -44,7 +40,6 @@ $mid-color: #fff;
     outline: none;
     cursor: pointer;
     //background-color: $sub-color;
-    border-bottom: 1px solid #ddd;
     &:hover {
       background-color: #e0e0e0;
     }
@@ -56,16 +51,16 @@ $mid-color: #fff;
 }
 
 
-.main-content-obfuscator {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(99,99,99,.5);
-  z-index: 2;
-  //transition-property: opacity;
-  //transition-duration: .2s;
-  //transition-timing-function: cubic-bezier(.4,0,.2,1);
-}
+//.main-content-obfuscator {
+//  width: 100%;
+//  height: 100%;
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  background-color: rgba(99,99,99,.5);
+//  z-index: 2;
+//  //transition-property: opacity;
+//  //transition-duration: .2s;
+//  //transition-timing-function: cubic-bezier(.4,0,.2,1);
+//}
 
