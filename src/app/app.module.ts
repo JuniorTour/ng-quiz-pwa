@@ -14,16 +14,23 @@ import { BattleComponent } from './pages/battle/battle.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DetailCardComponent } from './components/detail-card/detail-card.component';
 
+import {QuesService} from './services/ques.service';
 import {UserInfoService} from './services/user-info.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
+import { StartCardComponent } from './components/start-card/start-card.component';
+import { QuesCardComponent } from './components/ques-card/ques-card.component';
+import { EndCardComponent } from './components/end-card/end-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BattleComponent,
     HomeComponent,
-    DetailCardComponent
+    DetailCardComponent,
+    StartCardComponent,
+    QuesCardComponent,
+    EndCardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,8 @@ import { InMemoryDataService } from './services/in-memory-data.service';
     )
   ],
   providers: [
-    UserInfoService
+    UserInfoService,
+    QuesService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,0 +1,55 @@
+
+.question-card {
+  position: absolute;
+  top: 12px;
+  left: 5%;
+  border-radius: 5px;
+  text-align: left;
+  z-index: 3;
+  .card-header-right {
+    position: absolute;
+    right: 5%;
+  }
+  .question-card-actions {
+    text-align: center;
+    button {
+      width:60%;
+      margin: 12px 0;
+    }
+  }
+  .right-option {
+    background-color: #08d9d6;
+  }
+  .wrong-option {
+    background-color: #FF2E63;
+  }
+}
+
+.right-card-anim {
+  animation: right 1 .8s .2s;
+}
+
+.wrong-card-anim {
+  animation: wrong 1 .8s .2s;
+}
+
+
+@keyframes right {
+  30% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(8deg) translate(50px, 50px);
+    opacity: 0;
+  }
+}
+
+@keyframes wrong {
+  30% {
+    transform: rotate(-8deg);
+  }
+  100% {
+    transform: rotate(-8deg) translate(-50px, 50px);
+    opacity: 0;
+  }
+}

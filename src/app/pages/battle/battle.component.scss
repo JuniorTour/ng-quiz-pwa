@@ -1,22 +1,10 @@
 
-.question-card {
-  width: 80%;
-  border-radius: 5px;
-  margin: 12px auto;
-  //.question-card-header {
-  //
-  //}
-  .question-card-header-img {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-  //.question-card-img {
-  //}
-  .question-card-actions {
+:host /deep/ {
+  mat-card {
+    width: 80%;
+    margin: 12px auto;
     text-align: center;
-    button {
-      width:60%;
-      margin: 12px 0;
-    }
   }
 }
+
+

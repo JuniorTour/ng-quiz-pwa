@@ -1,0 +1,17 @@
+
+<mat-card class="start-card">
+  <mat-card-header>
+    <h2>Are you Ready?</h2>
+
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-icon-button
+            color="accent"
+            class="start-btn"
+            [class.pulse-anim]="!started"
+            (click)="start()">
+      <i class="material-icons">favorite</i>
+    </button>
+
+  </mat-card-actions>
+</mat-card>
