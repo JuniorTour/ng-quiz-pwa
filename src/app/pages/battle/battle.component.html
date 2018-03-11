@@ -1,7 +1,9 @@
 
+<mat-spinner class="loading-spinner" *ngIf="isLoading"></mat-spinner>
+
 <app-start-card
   (onStart)="start()"
-  *ngIf="!started"></app-start-card>
+  *ngIf="!started && !isLoading"></app-start-card>
 
 <ng-container *ngIf="started && !ended">
   <app-ques-card

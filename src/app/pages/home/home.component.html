@@ -1,3 +1,5 @@
 
-<app-detail-card></app-detail-card>
+<mat-spinner class="loading-spinner" *ngIf="isLoading"></mat-spinner>
+
+<app-detail-card *ngIf="!isLoading" [userInfo]="userInfo"></app-detail-card>
 

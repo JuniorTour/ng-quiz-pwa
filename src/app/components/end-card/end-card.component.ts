@@ -1,12 +1,16 @@
 import { Component, OnInit, Input } from '@angular/core';
 
+interface Result {
+  finalScore: number
+}
+
 @Component({
   selector: 'app-end-card',
   templateUrl: './end-card.component.html',
   styleUrls: ['./end-card.component.scss']
 })
 export class EndCardComponent implements OnInit {
-  @Input() result: object;
+  @Input() result: Result;
   animScore = 0;
   textScore: string;
 
@@ -28,7 +32,7 @@ export class EndCardComponent implements OnInit {
   startAnimateScore(duration, FPS) {
     /*TODO: Abstract an directive to animate the num by flexible parameters.*/
     const needFrameNum = duration * FPS;
-    const deltaNumEachFrame = this.result.finalScore / needFrameNum;
+    let deltaNumEachFrame = this.result.finalScore / needFrameNum;
     const power = deltaNumEachFrame.toString().length - deltaNumEachFrame.toString().indexOf('.') - 1;
     const index = Math.pow(10, power);
     deltaNumEachFrame = deltaNumEachFrame * index;

@@ -37,7 +37,8 @@ export class QuesCardComponent implements OnInit {
   }
 
   selectOption(option, btn, ques) {
-    const id = ques.id, isRight: boolean;
+    const id = ques.id;
+      let isRight: boolean;
 
     if (option === ques.answer) {
       isRight = true;

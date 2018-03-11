@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import {QuesService} from '../../services/ques.service';
 
+import {Ques} from '../../models/ques.model';
+
 @Component({
   selector: 'app-battle',
   templateUrl: './battle.component.html',
@@ -9,8 +11,9 @@ import {QuesService} from '../../services/ques.service';
 })
 export class BattleComponent implements OnInit {
 
-  questions: object[];
+  questions: Ques[];
 
+  isLoading = true;
   ended = false;
   started = false;
   result = {
@@ -26,6 +29,7 @@ export class BattleComponent implements OnInit {
   getQues() {
     this.quesService.getQues().subscribe(ques => {
       this.questions = ques;
+      this.isLoading = false;
     });
   }
 

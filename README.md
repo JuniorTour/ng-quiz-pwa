@@ -1,27 +1,49 @@
-# NgQuizPwa
+# Ng-Quiz-Pwa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.2.
+A simple project for demonstrate PWA.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Run
 
-## Code scaffolding
+```
+git clone 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+cd ng-quiz-pwa
 
-## Build
+npm i
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+ng s      // start in dev env with local development server
 
-## Running unit tests
+ng build --prod // build for prodction env
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Lighthouse Report
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## PWA Definition
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Progressive - Work for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenant.
+
+- Responsive - Fit any form factor, desktop, mobile, tablet, or whatever is next.
+  
+-  Connectivity independent - Enhanced with service workers to work offline or on low quality networks.
+  
+- App-like - Use the app shell model to provide app-style navigations and interactions.
+ 
+- Fresh - Always up-to-date thanks to the service worker update process.
+  
+ - Safe - Served via TLS to prevent snooping and ensure content hasn’t been tampered with.
+  
+ - Discoverable - Are identifiable as “applications” thanks to W3C manifests and service worker registration scope allowing search engines to find them.
+  
+ - Re-engageable - Make re-engagement easy through features like push notifications.
+  
+ - Installable - Allow users to “keep” apps they find most useful on their home screen without the hassle of an app store.
+  
+ - Linkable - Easily share via URL and not require complex installation.
+
+
+## PWA-lization steps
+
+
