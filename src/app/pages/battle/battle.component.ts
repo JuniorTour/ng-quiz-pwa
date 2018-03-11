@@ -9,10 +9,13 @@ import {QuesService} from '../../services/ques.service';
 })
 export class BattleComponent implements OnInit {
 
-  public questions: object[];
+  questions: object[];
 
-  public ended = false;
-  public started = false;
+  ended = false;
+  started = false;
+  result = {
+    finalScore: 0
+  };
 
   constructor(public quesService: QuesService) { }
 
@@ -31,9 +34,16 @@ export class BattleComponent implements OnInit {
     this.started = true;
   }
 
+  calculateScore() {
+    this.result.finalScore = this.quesService.rightNum * 100;
+  }
+
   end() {
     // alert('game end')
     this.ended = true;
+    this.calculateScore();
+
+    this.quesService.rightNum = 0;
   }
 
   animEnd(id) {

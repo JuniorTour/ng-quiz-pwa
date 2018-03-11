@@ -33,6 +33,7 @@ import { EndCardComponent } from './components/end-card/end-card.component';
     EndCardComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     CustMatModule,

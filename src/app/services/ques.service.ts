@@ -6,6 +6,7 @@ export class QuesService {
   private quesURL = 'api/ques';
 
   selectedOption: object[] = [];
+  rightNum = 0;
 
   constructor(
     private http: HttpClient

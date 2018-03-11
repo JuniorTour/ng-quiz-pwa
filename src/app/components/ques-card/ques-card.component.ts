@@ -42,6 +42,8 @@ export class QuesCardComponent implements OnInit {
     if (option === ques.answer) {
       isRight = true;
       btn._elementRef.nativeElement.classList.add('right-option');
+
+      this.quesService.rightNum++;
     } else {
       isRight = false;
       btn._elementRef.nativeElement.classList.add('wrong-option');
