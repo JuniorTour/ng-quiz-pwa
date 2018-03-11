@@ -35,4 +35,17 @@ export class BattleComponent implements OnInit {
     // alert('game end')
     this.ended = true;
   }
+
+  animEnd(id) {
+    // debugger
+    this.removeAnsweredCard(id)
+  }
+
+  removeAnsweredCard(quesId) {
+    this.questions.splice(this.questions.indexOf(quesId), 1);
+
+    if (this.questions.length === 0) {
+      this.end();
+    }
+  }
 }

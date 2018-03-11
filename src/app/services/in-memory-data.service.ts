@@ -6,7 +6,7 @@ import {UserInfo} from '../models/user-info.model';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const user: UserInfo = {
-      name: '3214',
+      name: 'JuniorTour',
       avatarLink: 'https://avatars1.githubusercontent.com/u/14243906?s=460&v=4',
       desc: 'A Student',
       points: 6666,

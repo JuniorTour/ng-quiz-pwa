@@ -39,10 +39,10 @@ $mid-color: #fff;
     background-size: auto 100%;
   }
 
-  mat-list-item {
+  .mat-list-item {
     outline: none;
     cursor: pointer;
-    //background-color: $sub-color;
+    text-decoration: none;
     &:hover {
       background-color: #e0e0e0;
     }

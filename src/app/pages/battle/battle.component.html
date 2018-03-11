@@ -3,10 +3,14 @@
   (onStart)="start()"
   *ngIf="!started"></app-start-card>
 
-<app-ques-card
-  [questions]="questions"
-  (onEnd)="end()"
-  *ngIf="started && !ended"></app-ques-card>
+<ng-container *ngIf="started && !ended">
+  <app-ques-card
+    *ngFor="let ques of questions"
+    [ques]="ques"
+    (onEnd)="end()"
+    (onAnimEnd)="animEnd($event)"
+  ></app-ques-card>
+</ng-container>
 
 <app-end-card
   *ngIf="ended"></app-end-card>

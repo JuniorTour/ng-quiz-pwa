@@ -1,8 +1,7 @@
 
 <mat-card class="question-card"
-                    [ngClass]="quesCardAnimClass[i]"
-          (animationend)="removeCard(ques)"
-                     *ngFor="let ques of questions;let i=index">
+                    [ngClass]="quesCardAnimClass"
+                    (animationend)="animEnd(ques)">
   <mat-card-header class="question-card-header">
     <img mat-card-avatar class="question-card-header-img" src="{{ques?.avatarLink}}" alt="{{ques?.name}}">
     <mat-card-title>{{ques?.title}}</mat-card-title>
@@ -20,11 +19,16 @@
   </mat-card-content>
   <mat-card-actions class="question-card-actions">
     <button mat-button
-                    *ngFor="let option of ques?.options"
+                    *ngFor="let option of ques?.options;let i = index"
                     #btn
                     [class.right-option]="showRightOption && option === ques?.answer"
                     (click)="selectOption(option, btn, ques)">{{option}}</button>
     <!--TODO: Better Judgement? [ngClass]="{'right-option': showRightOption(option)}"
     https://stackoverflow.com/questions/37891752/angular2-add-class-to-item-on-click -->
+    <!--The logic should be:
+    Click an option -> judge -> show result by class
+    The key point is each card should have its own state.
+
+    -->
   </mat-card-actions>
 </mat-card>

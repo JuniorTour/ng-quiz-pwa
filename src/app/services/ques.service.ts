@@ -5,6 +5,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class QuesService {
   private quesURL = 'api/ques';
 
+  selectedOption: object[] = [];
+
   constructor(
     private http: HttpClient
   ) { }
