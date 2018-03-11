@@ -1,11 +1,17 @@
+/*A simple server for SPA*/
 const path = require('path');
 const serveStatic = require('serve-static');
 
 const express = require('express');
 const app = express();
 
-// Simple serve static package: https://www.npmjs.com/package/serve-static
-app.use(serveStatic(path.join(__dirname, '../dist'), {'index': ['index.html', 'index.htm']}));
+// serve static assets normally
+app.use(express.static(path.join(__dirname, '../dist')));
+
+// handle every other route with index.html
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
+});
 
 const port = 4200;
 app.listen(port, function () {
