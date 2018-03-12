@@ -2,7 +2,7 @@
 <div class="container">
   <mat-card class="detail-card">
     <mat-card-header class="detail-card-header">
-      <img mat-card-avatar class="detail-card-header-img" src="{{userInfo?.avatarLink}}" alt="{{userInfo?.name}}">
+      <img mat-card-avatar class="detail-card-header-img" src="{{userInfo?.avatarLink}}" alt="user-avatar">
       <mat-card-title>{{userInfo?.name}}</mat-card-title>
       <mat-card-subtitle>{{userInfo?.desc}}</mat-card-subtitle>
     </mat-card-header>
@@ -32,12 +32,12 @@
 
   <div class="sub-detail-row non-equal-row">
     <mat-card class="invite-card txt-cut">
-      <i class="material-icons">favorite</i>
+      <i class="iconfont icon-love"></i>
       Invite
     </mat-card>
 
     <mat-card class="txt-cut">
-      <i class="material-icons">build</i>
+      <i class="iconfont icon-gear"></i>
       Config
     </mat-card>
 
@@ -46,7 +46,7 @@
 
   <div class="sub-detail-row">
     <mat-card class="notify-btn txt-cut" routerLink="/battle">
-      <i class="material-icons">games</i>
+      <i class="iconfont icon-game"></i>
       Let's Battle!
     </mat-card>
   </div>
@@ -54,7 +54,7 @@
 
   <div class="sub-detail-row">
     <mat-card class="notify-btn txt-cut">
-      <i class="material-icons">notifications_active</i>
+      <i class="iconfont icon-notify"></i>
       Notify
     </mat-card>
   </div>

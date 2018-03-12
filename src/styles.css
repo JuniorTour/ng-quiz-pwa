@@ -3,7 +3,15 @@
 
 @import "assets/css/normalize.min.css";
 
+@import "assets/css/iconfont.css";
+
 /*Global Style*/
+
+.iconfont {
+  vertical-align: middle;
+  font-size: 22px;
+  margin-right: 12px;
+}
 
 .txt-cut {
   white-space: nowrap;

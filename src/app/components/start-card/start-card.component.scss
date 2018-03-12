@@ -15,7 +15,7 @@
   width: 60px;
   height: 60px;
   margin: 24px 0;
-  & .material-icons {
+  & .icon-love {
     position: relative;
     width: 100%;
     height: 100%;
@@ -29,8 +29,9 @@
 }
 
 .pulse-anim {
-  & .material-icons {
+  & .icon-love {
     animation: pulse infinite 1.5s;
+    margin-right: 0;
     &:after {
       display: inline-block;
       position: absolute;
