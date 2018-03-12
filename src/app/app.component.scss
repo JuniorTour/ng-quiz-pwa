@@ -12,8 +12,8 @@ $mid-color: #fff;
 
 .sidenav-container {
   min-height: 100vh;
-  //margin-top: 56px;
   z-index: 1;
+  overflow: visible;
 
   .main-content {
     width: 100%;
@@ -46,7 +46,7 @@ $mid-color: #fff;
       background-color: #e0e0e0;
     }
 
-    .material-icons {
+    .iconfont {
       margin-right: 16px;
     }
   }

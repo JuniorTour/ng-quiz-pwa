@@ -1,5 +1,8 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+1_juniortour.net_bundle.crt
+2_juniortour.net.key
+
 # compiled output
 /dist
 /dist-server

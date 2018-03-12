@@ -41,10 +41,9 @@ $border-color: #ddd;
     .items-row {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-start;
       .detail-item {
+        width: 24px;
         box-sizing: border-box;
-        flex: 1 1 12.5%;
         background-color: #A8D8EA;
         font-size: 12px;
         line-height:12px;
@@ -78,6 +77,6 @@ $border-color: #ddd;
 .non-equal-row {
   mat-card:first-of-type {
     margin-right: 12px;
-    flex-grow: 2;
+    flex-grow: 1.5;
   }
 }
