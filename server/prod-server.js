@@ -8,7 +8,7 @@ const app = express();
 // serve static assets normally
 app.use(express.static(path.join(__dirname, '../dist')));
 
-// handle every other route with index.html
+// handle every other route with index.html for SPA
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });

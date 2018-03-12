@@ -10,7 +10,7 @@
     "lint": "ng lint",
     "prod": "node ./server/prod-server.js",
     "e2e": "ng e2e",
-    "precache": "sw-precache --root=dist --verbose"
+    "precache": "sw-precache --verbose --config=sw-precache-config.js"
   },
   "private": true,
   "dependencies": {

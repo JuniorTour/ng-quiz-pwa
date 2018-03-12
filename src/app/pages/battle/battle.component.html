@@ -1,19 +1,22 @@
 
-<mat-spinner class="loading-spinner" *ngIf="isLoading"></mat-spinner>
+<div class="container">
+  <mat-spinner class="loading-spinner" *ngIf="isLoading"></mat-spinner>
 
-<app-start-card
-  (onStart)="start()"
-  *ngIf="!started && !isLoading"></app-start-card>
+  <app-start-card
+    (onStart)="start()"
+    *ngIf="!started && !isLoading"></app-start-card>
 
-<ng-container *ngIf="started && !ended">
-  <app-ques-card
-    *ngFor="let ques of questions"
-    [ques]="ques"
-    (onEnd)="end()"
-    (onAnimEnd)="animEnd($event)"
-  ></app-ques-card>
-</ng-container>
+  <ng-container *ngIf="started && !ended">
+    <app-ques-card
+      *ngFor="let ques of questions"
+      [ques]="ques"
+      (onEnd)="end()"
+      (onAnimEnd)="animEnd($event)"
+    ></app-ques-card>
+  </ng-container>
 
-<app-end-card
-  [result]="result"
-  *ngIf="ended"></app-end-card>
+  <app-end-card
+    [result]="result"
+    *ngIf="ended"></app-end-card>
+</div>
+

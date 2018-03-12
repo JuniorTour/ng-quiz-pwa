@@ -12,7 +12,7 @@ interface Result {
 export class EndCardComponent implements OnInit {
   @Input() result: Result;
   animScore = 0;
-  textScore: string;
+  textScore = '0';
 
   constructor() { }
 
