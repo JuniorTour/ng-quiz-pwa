@@ -2,6 +2,8 @@
 
 A simple project for demonstrate PWA.
 
+![demo](https://raw.githubusercontent.com/JuniorTour/ng-quiz-pwa/master/notes/ng-quiz-pwa-demo-1.png)
+
 
 ## Run
 
